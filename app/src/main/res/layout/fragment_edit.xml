@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorRed"
+    android:padding="10dp"
+    tools:context=".EditFragment">
+
+
+    <EditText android:id="@+id/edit_name"
+        android:layout_width="300dp"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:hint="이름을 입력하세요"
+        android:fontFamily="@font/binggrae2_bold"
+        android:textColorHint="#FFFFFF"
+        android:maxLines="1">
+    </EditText>
+
+    <EditText android:id="@+id/edit_email"
+        android:textSize="14sp"
+        android:layout_width="300dp"
+        android:layout_below="@id/edit_name"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/binggrae2_bold"
+        android:textColorHint="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:hint="이메일 입력하세요"
+        android:maxLines="1">
+    </EditText>
+
+    <EditText android:id="@+id/edit_phone_number"
+        android:layout_below="@id/edit_email"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/binggrae2_bold"
+        android:layout_width="300dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:textSize="14sp"
+        android:hint="번호를 입력하세요"
+        android:textColorHint="#FFFFFF"
+        android:maxLines="1">
+    </EditText>
+
+    <Button android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_toRightOf="@+id/edit_name"
+        android:text="삭제"
+
+        android:textSize="20dp"
+        android:fontFamily="@font/binggrae2_bold"
+
+        android:layout_gravity="end"
+        android:layout_margin="10dp" />
+
+    <Button android:id="@+id/insert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/binggrae2_bold"
+
+        android:text="추가"
+        android:layout_below="@id/deleteButton"
+        android:layout_toRightOf="@id/edit_name" />
+
+
+</RelativeLayout>

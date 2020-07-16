@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".TodoDetailActivity"
+	android:background="#00FFFFFF">
+
+	<LinearLayout
+		android:id="@+id/editPage"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorApricot"
+		android:orientation="vertical"
+		android:paddingTop="40dp"
+		android:paddingLeft="40dp"
+		android:paddingRight="40dp"
+		android:paddingBottom="40dp"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="편집해 보세요"
+				android:textColor="@color/colorWhite"
+				android:textSize="30sp"
+				android:fontFamily="@font/binggrae2_bold"
+				android:layout_gravity="center"/>
+
+			<ImageButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="6dp"
+				android:layout_gravity="right"
+				android:background="#00FFFFFF"
+				android:onClick="closeClick"
+				android:src="@drawable/ic_x_red" />
+
+		</FrameLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingBottom="10dp"
+			android:paddingTop="20dp">
+
+			<TextView
+				android:id="@+id/titleText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="할일"
+				android:textSize="15sp"
+				android:fontFamily="@font/binggrae2_bold"
+				android:textColor="@color/colorOrange_dark"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:paddingTop="10dp">
+
+				<TextView
+					android:id="@+id/num"
+					android:layout_width="17dp"
+					android:layout_height="17dp"
+					android:layout_gravity="top"
+					android:gravity="center"
+					android:text="00"
+					android:textColor="@color/colorWhite"
+					android:textSize="10sp"
+					android:fontFamily="@font/binggrae2_bold"
+					android:layout_marginRight="10dp"/>
+
+				<EditText
+					android:id="@+id/titleEditText"
+					android:layout_width="match_parent"
+					android:layout_height="50sp"
+					android:maxLines="3"
+					android:hint="할일을 적어주세요!"
+					android:outlineSpotShadowColor="@color/colorWhite"
+					android:textColorHighlight="@color/colorRed"
+					android:textColor="@color/colorBlack"
+					android:textCursorDrawable="@drawable/edittext_cursor"
+					android:background="#00000000"
+					/>
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/dateText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="날짜"
+			android:textSize="15sp"
+			android:fontFamily="@font/binggrae2_bold"
+			android:textColor="@color/colorOrange_dark"
+			android:paddingTop="20dp"/>
+
+
+		<DatePicker
+			android:id="@+id/datePicker"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			style="@android:style/Widget.DatePicker"
+			android:calendarTextColor="@color/colorRed"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:padding="10dp">
+
+			<Button
+				android:id="@+id/editButton"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:onClick="editClick"
+				android:text="수정"
+				android:textColor="@color/colorWhite"
+				android:fontFamily="@font/binggrae2_bold"
+				android:background="@drawable/buttonshape_green"
+				android:layout_margin="5dp"/>
+
+			<Button
+				android:id="@+id/deleteButton"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:onClick="deleteClick"
+				android:text="삭제"
+				android:fontFamily="@font/binggrae2_bold"
+				android:textColor="@color/colorWhite"
+				android:background="@drawable/buttonshape_red"
+				android:layout_margin="5dp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

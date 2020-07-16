@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">함박웃음</string>
+	<string name="title_menu1">연락처</string>
+	<string name="title_menu2">사진</string>
+	<string name="title_menu3">할일</string>
+	<!-- TODO: Remove or change this placeholder text -->
+</resources>
